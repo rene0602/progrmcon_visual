@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bdejercicio1;
+package bdejercicio1.utilidades;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -58,20 +58,14 @@ public class Utilidades {
     }
     
     public boolean validarNumeros(String numero){
-        if (numero.isEmpty()) {
+           if (numero.isEmpty()) {
             return false;
         }else if (numero.length()<10) {
             return false;
         }
         try {
-             char a = numero.charAt(0);
-            if (a == '0') {
-                int validarNumero = Integer.parseInt(numero);
-                return true;
-            } else {
-                return false;
-            }
-
+            int validarNumero=Integer.parseInt(numero);
+            return true;
         } catch (Exception e) {
             return false;
         }
